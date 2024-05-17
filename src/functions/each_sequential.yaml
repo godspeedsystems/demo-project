@@ -1,0 +1,15 @@
+  summary: For each sample
+  description: Here we transform the response of for loop
+  tasks:
+    - id: each_sequential_step1
+      description: for each
+      fn: com.gs.each_sequential
+      value: [1, 2, 3, 4]
+      tasks:
+        - id: each_task1
+          fn: com.gs.transform
+          args: <% inputs.body.number * task_value %>
+    - id: each_sequential_step2
+      description: return the response
+      fn: com.gs.transform
+      args: <% outputs.each_sequential_step1.data %>

@@ -1,0 +1,5 @@
+summary: Fetch many Order
+tasks:
+  - id: postgres_order_search
+    fn: datasource.postgres.Order.findMany
+    args: {}

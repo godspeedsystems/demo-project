@@ -1,0 +1,7 @@
+summary: Delete Profile
+tasks:
+  - id: postgres_profile_delete
+    fn: datasource.postgres.Profile.delete
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

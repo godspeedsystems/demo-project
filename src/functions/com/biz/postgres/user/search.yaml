@@ -1,0 +1,5 @@
+summary: Fetch many User
+tasks:
+  - id: postgres_user_search
+    fn: datasource.postgres.User.findMany
+    args: {}

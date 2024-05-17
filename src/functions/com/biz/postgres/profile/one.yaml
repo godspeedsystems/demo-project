@@ -1,0 +1,7 @@
+summary: Fetch Profile
+tasks:
+  - id: postgres_profile_one
+    fn: datasource.postgres.Profile.findUnique
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

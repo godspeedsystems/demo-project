@@ -1,0 +1,93 @@
+# ONE
+http.get./postgres/profile/{id}:
+  summary: Fetch Profile
+  description: Fetch Profile from database
+  fn: com.biz.postgres.profile.one
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# CREATE
+http.post./postgres/profile:
+  summary: Create a new Profile
+  description: Create Profile from database
+  fn: com.biz.postgres.profile.create
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/postgres/Profile'
+  responses:
+    '201':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# UPDATE
+http.put./postgres/profile/{id}:
+  summary: Update a Profile
+  description: Update Profile from database
+  fn: com.biz.postgres.profile.update
+  body:
+    content:
+      application/json:
+        schema:
+          $ref: '#/definitions/postgres/Profile'
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '204':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# DELETE
+http.delete./postgres/profile/{id}:
+  summary: Delete a Profile
+  description: Delete Profile from database
+  fn: com.biz.postgres.profile.delete
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    '202':
+      content:
+        application/json:
+          schema:
+            type: object
+
+# SEARCH
+http.post./postgres/profile/search:
+  summary: Fetch multiple Profile
+  description: Fetch multiple Profile from database
+  fn: com.biz.postgres.profile.search
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  responses:
+    '200':
+      content:
+        application/json:
+          schema:
+            type: array
+

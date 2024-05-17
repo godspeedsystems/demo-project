@@ -1,0 +1,7 @@
+summary: Fetch Order
+tasks:
+  - id: postgres_order_one
+    fn: datasource.postgres.Order.findUnique
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

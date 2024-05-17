@@ -1,0 +1,6 @@
+summary: Create User
+tasks:
+  - id: postgres_user_create
+    fn: datasource.postgres.User.create
+    args:
+      data: <% inputs.body %>

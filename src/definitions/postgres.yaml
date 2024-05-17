@@ -1,0 +1,15 @@
+User:
+  type: object
+  properties: {}
+Profile:
+  type: object
+  properties:
+    bio:
+      type: string
+    userId:
+      type: integer
+Order:
+  type: object
+  properties:
+    user_id:
+      type: integer

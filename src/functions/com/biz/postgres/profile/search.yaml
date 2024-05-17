@@ -1,0 +1,5 @@
+summary: Fetch many Profile
+tasks:
+  - id: postgres_profile_search
+    fn: datasource.postgres.Profile.findMany
+    args: {}

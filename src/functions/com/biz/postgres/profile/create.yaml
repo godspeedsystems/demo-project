@@ -1,0 +1,6 @@
+summary: Create Profile
+tasks:
+  - id: postgres_profile_create
+    fn: datasource.postgres.Profile.create
+    args:
+      data: <% inputs.body %>

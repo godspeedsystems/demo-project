@@ -1,0 +1,7 @@
+summary: Delete Order
+tasks:
+  - id: postgres_order_delete
+    fn: datasource.postgres.Order.delete
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>

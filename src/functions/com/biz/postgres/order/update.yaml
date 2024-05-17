@@ -1,0 +1,8 @@
+summary: Update Order
+tasks:
+  - id: postgres_order_update
+    fn: datasource.postgres.Order.update
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>
+      data: <% inputs.body %>

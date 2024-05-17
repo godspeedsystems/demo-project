@@ -1,0 +1,8 @@
+summary: Update Profile
+tasks:
+  - id: postgres_profile_update
+    fn: datasource.postgres.Profile.update
+    args:
+      where:
+        id: <% parseInt(inputs.params.id) %>
+      data: <% inputs.body %>

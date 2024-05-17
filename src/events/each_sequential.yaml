@@ -1,0 +1,16 @@
+http.get./test/each_sequential:
+  summary: each_sequential
+  description: each_sequential
+  authn: false
+  fn: each_sequential
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+  # responses:
+  #   200:
+  #     content:
+  #       application/json:
+  #         schema:
+  #           type: number
